@@ -31,6 +31,7 @@
 				<li><a href="index.html">레드향 샐러드</a></li>
 				<li><a href="table.html">가격표</a></li>
 				<li><a href="order.html">레드향 주문하기</a></li>
+				<li><a href="register.html">회원 가입</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -41,6 +42,7 @@
 	</h1>
 	<form action="">
 		<fieldset>
+			<input type="hidden" value="사이트를 통한 직접 로그인">
 			<label>아이디 : <input type="text" id="user_id" size="10"></label>
 			<label>비밀번호 : <input type="password" id="user_pw" size="10"></label>
 			<input type="submit" value="로그인">
@@ -71,36 +73,68 @@
 				</li>
 			</ul>
 			<p>
-				<b>포장 선택</b>
+				<b>선물 포장 선택</b>
 			</p>
 			<label><input type="radio" name="gift" value="yes">선물 포장</label>
 			<label><input type="radio" name="gift" value="no">선물 포장 안 함</label>
+			<p>
+			<label for="prod2"><b>포장</b></label>
+			<input type="text" id="prod2" list="pack">
+			<datalist id="pack">
+				<option value="paper_package">상자 포장</option>
+				<option value="st_package">스티로폼 포장</option>
+			</datalist>
+			</p>
 		</fieldset>
 		<fieldset>
 			<legend>
-				배송 정보
+				<b>배송 정보</b>
 			</legend>
 			<ul>
 				<li>
-					<label for="user_name">이름 : <input type="text" id="user_name"></label>
+					<label for="prod">주문 상품:  
+					<input type="text" id="prod" value="상품용 3kg" readonly></label>
 				</li>
 				<li>
-					<label for="addr">주소 : <input type="text" id="addr"></label>
+					<label for="user_name">이름:  
+					<input type="text" id="user_name" autofocus required></label>
 				</li>
 				<li>
-					<label for="email">이메일 : <input type="text" id="email"></label>
+					<label for="addr">배송 주소  : 
+					<input type="text" id="addr" required></label>
 				</li>
 				<li>
-					<label for="phone">연락처 : <input type="text" id="phone"></label>
+					<label for="email">이메일 : 
+					<input type="text" id="email"></label>
 				</li>
 				<li>
-					<label for="delivery_date">배송 지정 : <input type="date" id="delivery_date"></label>
+					<label for="phone">연락처 :
+					<input type="tel" id="phone" placeholder="하이픈 빼고 입력해주세요.(01012345678)" required></label>
 				</li>
-				
+				<li>
+					<label for="delivery_date">배송 지정 : 
+					<input type="date" id="delivery_date" required> <small>(주문일로부터 최소 3일 이후)</small></label>
+				</li>
+				<li>
+					<label for="memo">메모 
+					<textarea type="memo" id="memo" cols="40" rows="4"></textarea></label>
+				</li>
 			</ul>
-			<input type="submit" value="저장">
 		</fieldset>
-
+		<div>
+			<input type="submit" value="주문하기">
+			<input type="reset" valur="취소하기">
+		</div>
+		<fieldset>
+			<legend>
+				<b>반품 정보</b>
+			</legend>
+			<p>
+				만약 수령한 상품에 문제가 있다면 즉시 <b>반품신청</b>해 주세요.<br>반품 신청시 상품의 상태를 사진으로 첨부해 주세요.
+			</p>
+			<hr>
+			<input type="file">
+		</fieldset>
 	</form>
 	
 </body>
