@@ -45,3 +45,8 @@ goormIDE is a powerful cloud IDE service to maximize productivity for developers
 
 Visit [https://ide.goorm.io](https://ide.goorm.io) to support and learn more about using goormIDE.  
 To watch some usage guides, visit [https://help.goorm.io/en/goormide](https://help.goorm.io/en/goormide)
+
+git remote add origin https://DHkimgit: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@github.com/DHkimgit/WEB_gittest
+
+
+git push -u origin main
