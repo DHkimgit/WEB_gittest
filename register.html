@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>레드향 샐러드 레시피</title>
+	<style>
+		table, td, th{
+			border : 2px solid black;
+			border-collapse : collapse;
+		}
+		table{
+			width : 500px;
+			height : 100px;
+		}
+		td, th{
+			text-align : center;
+			vertical-align : middle;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="#"><h1>레시피</h1></a>
+		</div>
+		<nav>
+			<ul id="topMenu">
+				<li><a href="https://namu.wiki/w/%EB%A0%88%EB%93%9C%ED%96%A5" target="_blank">레드향?</a></li>
+				<li><a href="index.html">레드향 샐러드</a></li>
+				<li><a href="table.html">가격표</a></li>
+				<li><a href="order.html">레드향 주문하기</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="container">
+		<h1>
+			회원 가입을 환영합니다
+		</h1>
+		<form>
+			<fieldset>
+				<legend>
+					사용자 정보
+				</legend>
+				<ul>
+					<li>
+					<label for="uid">아이디</label>
+					<input type="text" id="uid">
+					</li>
+					<li>
+						<label for="umail">이메일</label>
+						<input type="email" id="umail">
+					</li>
+					<li>
+						<label for="pwd1">비밀번호</label>
+						<input type="password" id="pwd1">
+					</li>
+					<li>
+						<label for="pwd2">비밀번호 확인</label>
+						<input type="password" id="pwd2">
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>
+					이벤트와 새로운 소식
+				</legend>
+				<label for="mailing_y">이메일 수신</label>
+				<input type="radio" name="mailing" id="mailing_y">
+				<label for="mailing_n">이메일 수신 안 함</label>
+				<input type="radio" name="mailing" id="mailing_n">
+			</fieldset>
+			<div id="buttons">
+				<input type="submit" value="가입하기">
+				<input type="reset" value="취소">
+			</div>
+		</form>
+	</div>
+</body>

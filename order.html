@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>레드향 샐러드 레시피</title>
+	<style>
+		table, td, th{
+			border : 2px solid black;
+			border-collapse : collapse;
+		}
+		table{
+			width : 500px;
+			height : 100px;
+		}
+		td, th{
+			text-align : center;
+			vertical-align : middle;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="#"><h1>레시피</h1></a>
+		</div>
+		<nav>
+			<ul id="topMenu">
+				<li><a href="https://namu.wiki/w/%EB%A0%88%EB%93%9C%ED%96%A5" target="_blank">레드향?</a></li>
+				<li><a href="index.html">레드향 샐러드</a></li>
+				<li><a href="table.html">가격표</a></li>
+				<li><a href="order.html">레드향 주문하기</a></li>
+			</ul>
+		</nav>
+	</header>
+    <h1>
+        <b>
+            레드향 주문하기
+        </b>
+	</h1>
+	<form action="">
+		<fieldset>
+			<label>아이디 : <input type="text" id="user_id" size="10"></label>
+			<label>비밀번호 : <input type="password" id="user_pw" size="10"></label>
+			<input type="submit" value="로그인">
+		</fieldset>
+		<fieldset>
+			<legend>
+				상품 선택
+			</legend>
+			<p>
+				<b>주문할 상품을 선택해주세요</b>
+			</p>
+			<ul>
+				<li>
+					<label><input type="checkbox" value="s_3">선물용 3kg</label>
+					<input type="number" min="0" max="5">개 (최대 5개)
+				</li>
+				<li>
+					<label><input type="checkbox" value="s_5">선물용 5kg</label>
+					<input type="number" min="0" max="5">개 (최대 5개)
+				</li>
+				<li>
+					<label><input type="checkbox" value="f_3">가정용 3kg</label>
+					<input type="range" min="0" max="5">개 (최대 5개)
+				</li>
+				<li>
+					<label><input type="checkbox" value="f_5">가정용 5kg</label>
+					<input type="range" min="0" max="5">개 (최대 5개)
+				</li>
+			</ul>
+			<p>
+				<b>포장 선택</b>
+			</p>
+			<label><input type="radio" name="gift" value="yes">선물 포장</label>
+			<label><input type="radio" name="gift" value="no">선물 포장 안 함</label>
+		</fieldset>
+		<fieldset>
+			<legend>
+				배송 정보
+			</legend>
+			<ul>
+				<li>
+					<label for="user_name">이름 : <input type="text" id="user_name"></label>
+				</li>
+				<li>
+					<label for="addr">주소 : <input type="text" id="addr"></label>
+				</li>
+				<li>
+					<label for="email">이메일 : <input type="text" id="email"></label>
+				</li>
+				<li>
+					<label for="phone">연락처 : <input type="text" id="phone"></label>
+				</li>
+			</ul>
+			<input type="submit" value="저장">
+		</fieldset>
+
+	</form>
+	
+</body>
