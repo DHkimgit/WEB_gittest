@@ -1,17 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Noto+Sans+KR:wght@300&display=swap');
 
+#topMenu li{
+	list-style: none;
+	border: 1px solid black ;
+	display: inline-block;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: center;
+	background-color: #CCCCFF;
+	height: 10px;
+	
+}
+
+body {
+	background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+
+
 .title {
 	font-weight: bold;
 	font-size: 30px;
 }
 #title {
-	padding: 1px;
 	background-color: #222;
 	color : #fff;
 	margin: 0;
 	text-align: center;
-	padding: 1px auto;
+	padding: 1px;
 	border: 0;
+	width: auto;
+	height: auto;
+	transform : rotate(0.04deg);
 }
 .accent{
 	border: 1px solid #000;
@@ -26,7 +48,8 @@
 	border: 1px solid #000; /*테두리 굵기와 색깔*/
 	padding: 10px; /*테두리와 내용 사이 여백*/
 	font-family: 'Noto Sans KR', sans-serif; /*폰트 설정*/
-	color: #917FC3; /*폰트 색상 설정*/
+	color: #9F9FEF; /*폰트 색상 설정*/
+	transform : rotate(0.04deg); /*안티앨리어싱 적용되어 보임*/
 }
 .img_center{
 	display: block;
@@ -37,4 +60,10 @@
 }
 .center{
 	text-align: center;
+}
+.nav_wrap{
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #000;
 }

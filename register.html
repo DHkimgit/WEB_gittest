@@ -18,7 +18,21 @@
 			text-align : center;
 			vertical-align : middle;
 		}
+		.list_non{
+			list-style-type: none; /*순서 없는 목록*/
+		}
+		.line{
+			line-height: 2; /*줄간격*/
+		}
+		#buttons{
+			margin-top: 10px;
+			text-align : center;
+		}
+		body{
+			font-family: 'Noto Sans KR', sans-serif;
+		}
 	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
@@ -36,15 +50,15 @@
 		</nav>
 	</header>
 	<div id="container">
-		<h1>
+		<h1 style="text-align: center; color: #593CA8">
 			회원 가입을 환영합니다
 		</h1>
 		<form>
-			<fieldset>
+			<fieldset style="border-style: dashed; border-width:medium;">
 				<legend>
 					사용자 정보
 				</legend>
-				<ul>
+				<ul class="list_non line">
 					<li>
 					<label for="uid">아이디</label>
 					<input type="text" id="uid">
@@ -76,7 +90,7 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset>
+			<fieldset style="border-style: dashed; border-width:medium;">
 				<legend>
 					이벤트와 새로운 소식
 				</legend>

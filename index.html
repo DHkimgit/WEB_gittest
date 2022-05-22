@@ -13,8 +13,8 @@
 		table{
 			width : 500px;
 			height : 100px;
-			margin-left: auto;
-			margin-right: auto;
+			margin-left: auto; /*바깥 영역 속성값이 auto면 좌 우 여백값이 동일하게 설정되므로*/
+			margin-right: auto; /*가운데 정렬되게 된다*/
 		}
 		td, th{
 			text-align : center;
@@ -31,7 +31,8 @@
 		<div id="logo">
 			<a href="#"><h1 class="accent bg">레시피</h1></a>
 		</div>
-		<nav>
+		<div class="nav_wrap">
+			<nav>
 			<ul id="topMenu">
 				<li><a href="https://namu.wiki/w/%EB%A0%88%EB%93%9C%ED%96%A5" target="_blank">레드향?</a></li>
 				<li><a href="#">레드향 샐러드</a></li>
@@ -40,6 +41,7 @@
 				<li><a href="register.html">회원 가입</a></li>
 			</ul>
 		</nav>
+		</div>
 	</header>
     <div id="title">
 		<h1 style="font-size: 40px">
