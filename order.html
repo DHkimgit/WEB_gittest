@@ -18,23 +18,31 @@
 			text-align : center;
 			vertical-align : middle;
 		}
+		.list_non{
+			list-style-type: none; /*순서 없는 목록*/
+		}
+		.line{
+			line-height: 2; /*줄간격*/
+		}
 	</style>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
-		<div id="logo">
-			<a href="#"><h1>레시피</h1></a>
+		<div class="logo-container">
+			<a href="#" class="logo-item"><h1>레드향 농장</h1></a>
 		</div>
-		<nav>
-			<ul id="topMenu">
-				<li><a href="https://namu.wiki/w/%EB%A0%88%EB%93%9C%ED%96%A5" target="_blank">레드향?</a></li>
-				<li><a href="index.html">레드향 샐러드</a></li>
-				<li><a href="table.html">가격표</a></li>
-				<li><a href="order.html">레드향 주문하기</a></li>
-				<li><a href="register.html">회원 가입</a></li>
+		<div>
+			<nav>
+			<ul class="nav-container">
+				<li class="nav-item"><a href="https://namu.wiki/w/%EB%A0%88%EB%93%9C%ED%96%A5" target="_blank">레드향?</a></li>
+				<li class="nav-item"><a href="index.html">레드향 샐러드</a></li>
+				<li class="nav-item"><a href="table.html">가격표</a></li>
+				<li class="nav-item"><a href="order.html">레드향 주문하기</a></li>
+				<li class="nav-item"><a href="register.html">회원 가입</a></li>
 			</ul>
 		</nav>
+		</div>
 	</header>
     <h1>
         <b>
@@ -57,27 +65,27 @@
 			</p>
 			<ul>
 				<li>
-					<label><input type="checkbox" value="s_3">선물용 3kg</label>
-					<input type="number" min="0" max="5">개 (최대 5개)
+					<input type="checkbox" value="s_3"><label>선물용 3kg</label>
+					<input type="number" min="0" max="5"><label>개 (최대 5개)</label>
 				</li>
 				<li>
-					<label><input type="checkbox" value="s_5">선물용 5kg</label>
-					<input type="number" min="0" max="5">개 (최대 5개)
+					<input type="checkbox" value="s_5"><label>선물용 5kg</label>
+					<input type="number" min="0" max="5"><label>개 (최대 5개)</label>
 				</li>
 				<li>
-					<label><input type="checkbox" value="f_3">가정용 3kg</label>
-					<input type="range" min="0" max="5">개 (최대 5개)
+					<input type="checkbox" value="f_3"><label>가정용 3kg</label>
+					<input type="range" min="0" max="5"><label>개 (최대 5개)</label>
 				</li>
 				<li>
-					<label><input type="checkbox" value="f_5">가정용 5kg</label>
-					<input type="range" min="0" max="5">개 (최대 5개)
+					<input type="checkbox" value="f_5"><label>가정용 5kg</label>
+					<input type="range" min="0" max="5"><label>개 (최대 5개)</label>
 				</li>
 			</ul>
 			<p>
 				<b>선물 포장 선택</b>
 			</p>
-			<label><input type="radio" name="gift" value="yes">선물 포장</label>
-			<label><input type="radio" name="gift" value="no">선물 포장 안 함</label>
+			<input type="radio" name="gift" value="yes"><label>선물 포장</label>
+			<input type="radio" name="gift" value="no"><label>선물 포장 안 함</label>
 			<p>
 			<label for="prod2"><b>포장</b></label>
 			<input type="text" id="prod2" list="pack">
@@ -91,34 +99,34 @@
 			<legend>
 				<b>배송 정보</b>
 			</legend>
-			<ul>
+			<ul class="delivery_if list_non line">
 				<li>
-					<label for="prod">주문 상품:  
-					<input type="text" id="prod" value="상품용 3kg" readonly></label>
+					<label for="prod">주문 상품</label>  
+					<input type="text" id="prod" value="상품용 3kg" readonly>
 				</li>
 				<li>
-					<label for="user_name">이름:  
-					<input type="text" id="user_name" autofocus required></label>
+					<label for="user_name">이름  </label>
+					<input type="text" id="user_name" autofocus required>
 				</li>
 				<li>
-					<label for="addr">배송 주소  : 
-					<input type="text" id="addr" required></label>
+					<label for="addr">배송 주소   </label>
+					<input type="text" id="addr" required>
 				</li>
 				<li>
-					<label for="email">이메일 : 
-					<input type="text" id="email"></label>
+					<label for="email">이메일 </label>
+					<input type="text" id="email">
 				</li>
 				<li>
-					<label for="phone">연락처 :
-					<input type="tel" id="phone" placeholder="하이픈 빼고 입력해주세요.(01012345678)" required></label>
+					<label for="phone">연락처 </label>
+					<input type="tel" id="phone" placeholder="하이픈 빼고 입력해주세요.(01012345678)" required>
 				</li>
 				<li>
-					<label for="delivery_date">배송 지정 : 
-					<input type="date" id="delivery_date" required> <small>(주문일로부터 최소 3일 이후)</small></label>
+					<label for="delivery_date">배송 지정  </label>
+					<input type="date" id="delivery_date" required> <small>(주문일로부터 최소 3일 이후)</small>
 				</li>
 				<li>
-					<label for="memo">메모 
-					<textarea type="memo" id="memo" cols="40" rows="4"></textarea></label>
+					<label for="memo">메모 </label>
+					<textarea type="memo" id="memo" cols="40" rows="4"></textarea>
 				</li>
 			</ul>
 		</fieldset>
