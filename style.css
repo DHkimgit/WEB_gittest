@@ -124,3 +124,18 @@ input[type=checkbox]:checked + label{
 	font-size: 15px;
 	width: 110px; /* 너비를 110으로 설정*/
 }
+
+#box{
+	background-color: #4cff00;
+	border: 1px solide transparent;
+	animation-name: shape;
+	animation-duration: 3s;
+}
+
+@keyframes shape{
+	from{border: 1px solid transparent; }
+	to{
+		border: 1px solid #000;
+		border-radius: 50%;
+	}
+}
