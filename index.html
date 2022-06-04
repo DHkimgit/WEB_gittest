@@ -38,6 +38,8 @@
 				<li class="nav-item"><a href="index.html">레드향 샐러드</a></li>
 				<li class="nav-item"><a href="table.html">가격표</a></li>
 				<li class="nav-item"><a href="order.html">레드향 주문하기</a></li>
+				<li class="nav-item"><a href="lightbox.html">나무사진</a></li>
+				<li class="nav-item"><a href="createnode.html">레드향 메모</a></li>
 				<ul style="float: right; list-style-type:none;">
 					<li class="nav-item"><a href="register.html">회원 가입</a></li>
 				</ul>
@@ -50,15 +52,30 @@
             레드향 셀러드 레시피
         </h1>
 	</div>
-	<div class="img">
-		<span class="img_center"><img src="https://w.namu.la/s/284e67df90254e8f168043cedd7cfc62570296916dfcd8d3138f7884edccf6ce8189fd04a267a1c9fdda0f4b1aeb86acd4ced1077551d06d0478673d058aebb3ebb9e8eea3f21c492ba2609e2541b4d3bb1df073ce6741439b7aae892ff52e29" width="70%"></span>
-		<div class="img_if">
-		레드향 판매중
-			<div class="box" id="box1">
-				
-			</div>
+	
+	<div id="item">
+		<img id = "cover" src="https://w.namu.la/s/284e67df90254e8f168043cedd7cfc62570296916dfcd8d3138f7884edccf6ce8189fd04a267a1c9fdda0f4b1aeb86acd4ced1077551d06d0478673d058aebb3ebb9e8eea3f21c492ba2609e2541b4d39b243a3cfa2b5058c7e7f38feed088b3" width="70%" alt="">
+		<button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+		<div id="desc" class="detail">
+			<h4>레드향</h4>
+			<p>운향과 귤속 재배식물로, 1991년 일본에서 서지향(C. 'Nishinokaori')에 병감(C. reticulata var poonensis)의 꽃가루를 교배해 개발한 만감류 품종이다. </p>
+			<button id="close" onclick ="hideDetail()">상세 설명 닫기</button>
 		</div>
 	</div>
+	
+	<script>
+		var cover = document.getElementById("cover");
+		cover.addEventListener("mouseover", changePic);
+		cover.addEventListener("mouseout", originPic);
+		
+		function changePic() {
+			cover.src = "https://w.namu.la/s/41a688aec8bf832f4b90dc52b7cd4b346e31fdd8944ca625403bf184ce6dd52b1310654638f13c809df870dbc2415bc99fe8128435d3634ce3d749c694cb16026c280f6fb304e5b5fed2b2e9dfcbb92e850522b044527963786279e5847160c8903f63bf16d07a80bc5945225024da9e"
+		}
+		
+		function originPic() {
+			cover.src = "https://w.namu.la/s/284e67df90254e8f168043cedd7cfc62570296916dfcd8d3138f7884edccf6ce8189fd04a267a1c9fdda0f4b1aeb86acd4ced1077551d06d0478673d058aebb3ebb9e8eea3f21c492ba2609e2541b4d39b243a3cfa2b5058c7e7f38feed088b3"
+		}
+	</script>
 	
 	<div id="container">
         <p><b>재료 : </b>레드향 1개, 아보카도 1개, 토마토 1개, 샐러드 채소 30g</p>
@@ -114,5 +131,16 @@
 			</tr>
 		</tbody>
 	</table>
+	<script>
+		function showDetail(){
+			document.querySelector('#desc').style.display = "block";	// 상세 설명 부분을 화면에 표시
+			document.querySelector('#open').style.display = "none";
+		}
+		function hideDetail(){
+			document.querySelector('#desc').style.display = "none";	// 상세 설명 부분을 화면에서 감춤
+			document.querySelector('#open').style.display = "block";
+		}
+		
+	</script>
 </body>
 </html>

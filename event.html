@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이벤트 실습</title>
+	<link rel="stylesheet" href="event_function.css">
+	<style>
+    #container{
+      margin:50px auto;
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      border:2px double #222;
+      background-color:#d8f0fc;
+      text-align: center;
+    }
+    h1 {
+      margin-top:80px;
+    }
+    .accent {
+      font-size:1.8em;
+      font-weight:bold;
+      color:red;
+    }
+  </style>
+</head>
+<body>
+	<script>
+		window.open("notice.html", "", "width=500, height=400, left=100, top=200");
+	</script>
+	
+	<ul>
+		<li><a href="#" onclick="changeBg('green')">Green</a></li>
+		<li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+		<li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+	</ul>		
+<div id="result"></div>
+
+<div id="container">
+    <h1>책 읽기</h1>
+    <p><span class="accent" id="result1"></span>일 연속으로 <br> 책 읽기를 달성했군요.</p>
+    <p>축하합니다!</p>
+</div>  
+
+
+	
+<script>
+	function changeBg(color){
+		var result = document.querySelector('#result');
+		result.style.backgroundColor = color;
+	}
+	var now = new Date();
+	document.write("현재 시간은 " + now.toLocaleString());
+	
+	var numbers = Array("one", "two", "three", "four");
+	var realnum = Array("1", "2", "3", "4")
+	
+	for (let i = 0; i < numbers.length; i++){
+		document.write("<p>" + numbers[i] + "</p>");
+	}
+	
+	var string1 = realnum.join()
+	document.write("구분자 없이 : ", string1);
+	document.write("<br>" )
+	var string2 = realnum.join('/');
+	document.write("구분자 / : ", string2);
+	
+	var now = new Date("2022-06-01");
+	var firstday = new Date("2022-06-04");
+	
+	var toNow = now.getTime();
+	var toFirst = firstDay.getTime();
+	var passesTime = toNow - toFirst;
+	
+	passesTime = math.round(passesTime/(1000*60*60*24));
+	
+	document.querySelector('#result1').innerText = passesTime;
+	
+	window.open("notice.html", "", "width=500, height=400");
+	
+</script>
+</body>
+</html>  
